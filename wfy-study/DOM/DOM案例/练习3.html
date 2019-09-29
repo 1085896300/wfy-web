@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+       .a{
+           width:200px;
+           height:200px;
+       }
+       .b{
+           background-color: red;
+       }
+       .c{
+           background-color: blue;
+       }
+    </style>
+</head>
+<body>
+        <div id="mydiv" class="a b"></div>
+        <script>
+            var div=document.getElementById('mydiv');
+            console.log(div.className);
+            mydiv.onclick=function(){
+                div.className='a b'?div.className='a c':div.className='a b';
+            }
+        </script>
+</body>
+</html>

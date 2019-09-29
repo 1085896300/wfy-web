@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height:100px;
+            padding: 10px;
+            margin:10px;
+            border:10px solid black;
+            background-color: red;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <script>
+       var mydiv=document.getElementById('mydiv');
+       console.log(mydiv.style)//这种方法只能拿到内联
+    //    console.log(mydiv.offsetWidth);
+       console.log(mydiv.clientWidth);
+      // clientWidth和clientHeight属性也可以获取元素的宽高，
+       //但是与offsetWidth和offsetHeight属性不同的是不包含边框
+
+    </script>
+</body>
+</html>

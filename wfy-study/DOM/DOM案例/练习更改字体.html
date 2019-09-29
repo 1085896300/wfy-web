@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <!-- 随便一个标签给他一个id
+    获取这个元素的标签名
+    如果元素是加粗的就变成不加粗 -->
+    <h1 id="p">今天周一，一天满课</h1>
+    <script>
+        var p=document.getElementById("p");
+        console.log(p.tagName);
+        //方法1
+        // if(p.tagName=="H1"||p.tagName=="H2"||p.tagName=="H3"||p.tagName=="H4"||p.tagName=="H5"||p.tagName=="H6"||p.tagName=="B"||p.tagName=="STRONG"){
+        //     p.style.fontWeight=400;
+        // }
+
+        //方法2
+        //哪些是加粗标签h1 h2 h3 h4 h5 h6 b strong
+        //不管是不是粗体，统一变为细体
+        //  p.style.fontWeight=400;
+
+         //方法三
+         var arr=['H1','H2','H3','H4','H5','H6','B','STRONG'];
+         var isTure=arr.indexOf(p.tagName);
+         console.log(isTure);
+         if(isTure != -1){
+            p.style.fontWeight=400;
+            p.style.color='red';
+         }
+    </script>
+
+</body>
+</html>

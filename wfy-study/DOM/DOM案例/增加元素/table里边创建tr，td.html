@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- table里写一行三列 -->
+    <table id="table"></table>
+    <script>
+        for(i=0;i<3;i++){
+            var table=document.getElementById("table");
+            var tr = document.createElement('tr');
+            table.appendChild(tr);
+        
+         
+            for(j=0;j<3;j++){
+               var td=document.createElement('td');
+               tr.appendChild(td);
+            }
+        }
+     </script>
+</body>
+<ml>
