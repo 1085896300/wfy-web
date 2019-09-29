@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+       <input type="text" placeholder="请输入用户名" id="n">
+       <div id="ts"></div>
+       <br>
+       <input type="password" placeholder="请输入密码" id="pass">
+       <div id="ts1"></div>
+       <button id="btn">提交</button>
+    
+    <script>
+        var arr=['tom','jack','lili']  
+        var n=document.getElementById('n');
+        var ts=document.getElementById('ts');
+        var pass=document.getElementById('pass');
+        var ts1=document.getElementById('ts1');
+        var btn=document.getElementById('btn');
+        document.getElementById('n').onblur=function(){
+        	if(arr.indexOf(n.value)!=-1){
+              ts.innerHTML='该用户名已存在';
+           }else if(n.value ==''||pass.value ==''){
+              ts.innerHTML='信息不完整';
+           }else{
+              ts.innerHTML='用户名设置成功';
+           }
+        }
+        pass.onblur=function(){
+        
+           if(n.value ==''||pass.value ==''){
+              ts1.innerHTML='信息不完整';
+           }else{
+              ts1.innerHTML='密码设置成功';
+           }
+        }
+        btn.onclick=function(){
+            if (n.value==''||pass.value=='') {
+				alert('用户名和密码不可为空');			    
+			}else if (arr.indexOf(n.value)!=-1) {
+                alert('用户名已被注册');
+                return false;
+            }else{
+				alert('注册成功')
+			}
+        }  
+    </script>
+</body>
+</html>
