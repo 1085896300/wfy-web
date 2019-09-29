@@ -1,0 +1,150 @@
+#第二章 JavaScript数据类型
+###2.1 数据类型的分类
+2.1.1基础数据类型
+基础数据类型，也可以叫简单数据类型或者原始数据类型，通常表示某种值，对值进行的比较
+
+2.1.2引用数据类型
+引用数据类型也可以叫复杂数据类型，是键值对形式出现的，一属性和属性值构成，无序列表集合，在内存中占据独立的空间，任何连个独立的对象都不相等
+
+###2.2基本数据类型
+2.2.1 数字类型
+ Number类型：这种类型用IEEE745格式来表示整数和浮点数
+数字类型包括：整数，浮点数，NAN，Infinity。
+数字范围：最小值5e-324，最大值2的53次方
+ISNaN（）方法用来验证该值是否为数字，非数字返回值为true。数字返回false
+
+        var a=10;
+        var b='10';
+        //alert(isNaN(a + b));false
+        //alert(isNaN(a*b));false
+        //alert(isNaN(a-b));false
+        //alert(isNaN(NaN));true
+        alert(isNaN(a/b));//false
+
+2.2.2字符串类型
+String类型是用引号括起来的一组16位Unicode字符组成的字符序列，字符串类型通常被用于表示文本数据
+
+       var a='你好';
+       var b="你们好";
+       var c="您好，我叫'tom'";
+
+字符串中反斜线有着特殊用途，反斜线后边加一个特殊字符，就变成了转义字符，具备一些特殊用途。
+
+2.2.3布尔类型
+Boolean类型，只有两个字面量值，分别是true和false，并且他们区别大小写，小写的是布尔类型的值。
+数据类型中有以下数据类型转换后位false：
+（1）false
+
+（2）''空字符串
+
+（3）+0和-0
+
+（4）NaN
+
+（5）null
+
+ (6)undefined
+
+2.2.4null
+null类型，是一个对象，函数的参数。表示该函数不是对象也可以当做空对象使用
+       console.log(null+1);
+       //null数字类型转换为0
+2.2.5undefined
+undefined类型代表未定义，是变量的初始值，也是函数的默认返回值。
+       console.log(undefined+1);
+       //undefined数字类型转换为NaN
+
+###2.3验证基础数据类型
+typeof运算符把信息当做‘字符串’返回，也就是说返回值都是字符串类型，返回值有几种情况：number，string，boolean。undefined，function，null返回的时object，对于对象不能用typeof检测
+
+       var a=10;
+       var b='nihao';//string
+       var c=true;//boolean
+       var d=false;//boolean
+       var e=null;//object
+       var f=undefined;//undefined
+       var g=['1',2];//object
+       var h=function(){
+           alert(1);
+       };//function
+       console.log(typeof a-c);//nan
+       console.log(typeof(a-c));//number
+
+typeof后边的括号，在运算时一定要用。否则返回值可能不正确。
+
+###2.4数据类型的转换
+2.4.1 强制转换
+强制转换主要指用Number(),String(),Boolean()三个函数，手动将各种类型的值分别转换为数字类型，字符串类型，布尔类型。
+
+转化为数字类型
+
+       console.log(Number('325'));
+       console.log(Number('nihao'));//NaN
+       console.log(Number(''));//0
+       console.log(Number(true));//1
+       console.log(Number(false));//0
+转化为字符串类型
+
+       console.log(String('325'));//325
+       console.log(String(true));//true
+       console.log(String(false));//false
+转化为布尔类型
+
+       console.log(Boolean('325'));//true
+       console.log(Boolean('nihao'));//true
+       console.log(Number(''));//false
+       console.log(Boolean(0));//false
+       console.log(Boolean(NaN));//false
+
+2.4.2parseInt（）和parseFloat（）；
+parseInt（）函数可以将数据转换为数字类型，并取整数部分，浮点数部分不取，如先遇到非数字，显示NaN
+
+       var a=10.67;//10
+       var b='4.644';//4
+       var c='12e';//12
+       var d='nihao';//NaN
+       var e='mihao123';//NaN
+
+parseFloat（）函数可以将数据转换为数字类型，取整数和浮点数部分。
+
+       var a=10.67;//10.67
+       var b='4.644';//4.644
+       var c='12e';//12
+       var d='nihao';//NaN
+       var e='mihao123';//NaN
+
+2.4.3自动转换
+变量的数据类型不确定，但各种运算符对数据类型是有要求的，如果运算符发现运算的数据类型与预期不一样，就会进行自动转换
+
+      var a=10;
+      var b='10';
+      var c='nihao';
+      console.log(a+b);//'1010'
+      console.log(a-b);//0
+      console.log(a*b);//100      
+      console.log(a/b);//1
+      console.log(a-c);//NaN
+
+
+#作业：
+##数据类型和转换
+###9.18
+1.写两个输入框和一个计算按钮
+
+2.将两个输入框内用户输入的数据相加
+
+3.将相加后的值显示在页面上
+
+4.注意：用户可能输入的不是数字，需要处理。
+
+5.只作整数加法，不做浮点加法。
+
+6.如用户输入的不是数字，则弹出提示框
+
+7.将作业文件夹命名为XXX-work9.18，上传至work仓库.XXX为名字缩写
+
+8.只写一个index.html文件即可，css和js内容都写在html文件中，不用单独创建文件。
+
+
+
+
