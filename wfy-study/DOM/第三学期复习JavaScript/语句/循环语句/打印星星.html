@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    for (var line=1;line<=5;line++ ){
+	// 				//追加空格 循环条件从一开始,到5-line结束                   
+	// 			   var msg="";
+	// 			   for(var sp=1;sp<=5-line;sp++){
+	// 			    msg+=" ";
+	// 			   }
+	// 			   //打印*循环:从一开始到line结束
+	// 			   for(var star=1;star<=line;star++){
+	// 			   msg+="❤";
+	// 			   }
+	// 			   console.log(msg);
+	// 	}
+        for(var line=1;line<=5;line++){
+              var msg=" ";
+              for(var heat=1;heat<=line;heat++){
+                  msg+="❤";
+              }
+              for(var sp=1;sp<=5-heat;sp++){
+                  msg+=" ";
+              }
+              document.write(msg+'</br>');
+            //   console.log(msg);
+        }
+    </script>
+</body>
+</html>

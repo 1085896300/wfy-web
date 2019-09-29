@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="year" placeholder="请输入您的年龄">
+    <button id="btn">结果</button>
+    <script>
+       btn.onclick=function(){
+            console.log(year.value);
+            var Y=year.value;
+            if(Y<=6){
+                alert('免费用餐');
+            }else if(Y>=80){
+                alert('用餐打八折');
+            }else{
+                alert('原价');
+            };
+
+       }
+    </script>
+</body>
+</html>
