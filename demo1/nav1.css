@@ -1,0 +1,129 @@
+.nav1-area{
+	height: 64px;
+	background-color: #333333;
+}
+.nav1-area .center > a{
+	display: block;
+	padding: 20px 35px;
+	font-weight: 600;
+	font-size: 18px;
+	background-color: #73B320;
+	color: #FFFFFF;
+	float: left;
+}
+.nav1-area .center > a:hover{
+	background-color: #39b0ff;
+    transition: background-color 1s;
+    transition: 0.5s;
+}
+.nav1-area .center > a i{
+	font-style: normal;
+}
+/*.nav1-area  ul {
+	float: left;
+	margin-left: 15px;
+}
+.nav1-area  ul > li {
+	display: block;
+	font-size: 14px;
+	line-height: 15px;
+	font-weight: 600;
+	float: left;
+	
+}
+.nav1-area  ul > li a{
+	display: inline-block;
+	padding: 25px;
+	color: #FFFFFF;
+}
+.nav1-area  ul > li i {
+	display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    transform: rotate(45deg) translateY(-3px);
+}*/
+.nav1-area .Navigation{
+    float: left;
+    line-height: 20px;
+    padding: 30px 0 0 20px;
+}
+.nav1-area  .Navigation>li{
+    float: left;
+    margin-right: 50px;
+    position: relative;
+}
+.nav1-area  .Navigation>li>a{
+    color: #bfbfbf;
+}
+.nav1-area  .Navigation>li>a i{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg) translateY(-3px);
+    border-right: 1.5px solid #bfbfbf;
+    border-bottom: 1.5px solid #bfbfbf;
+}
+.nav1-area  .Navigation>li>ul{
+    position: absolute;
+    right: 0;
+    top: 25px;
+    background-color: #262626;
+    opacity: 0.7;
+    width: 120px;
+    display: none;
+    z-index: 20;
+}
+.nav1-area  .Navigation>li a{
+    color: #ffffff;
+}
+.nav1-area  .Navigation>li>ul>li:hover{
+	background-color: #000000;
+}
+.nav1-area  .Navigation>li:nth-child(3)>ul>li>a{
+    color: #73b320;
+}
+.nav1-area  .Navigation>li:nth-child(4)>ul>li>a{
+    color: #73b320;
+}
+.nav1-area  .Navigation>li:nth-child(3)>ul{
+   display: inline-block;
+   display: none;
+   width: 380px;
+   padding-top: 10px;
+   padding-right: 20px;
+}
+.nav1-area  .Navigation>li:nth-child(3)>ul>li{
+    padding-top: 10px;
+    padding-right: 20px;
+    box-sizing: border-box;
+ }
+.nav1-area  .Navigation>li:nth-child(4)>ul{
+    display: inline-block;
+    display: none;
+    width: 500px;
+    padding-top: 10px;
+    padding-right: 20px;
+ }
+.nav1-area  .Navigation>li:nth-child(4)>ul>li{
+    padding-top: 10px;
+    padding-right: 20px;
+    box-sizing: border-box;
+ }
+
+.nav1-area  .Navigation>li:hover>ul{
+    display: block;
+ }
+.nav1-area  .Navigation>li>ul>li div{
+    width: 100px;
+    height: 0;
+    border: 1px solid #73b320;
+}
+.nav1-area  .Navigation>li>ul>li{
+    float: left;
+}
+
+
+
+
