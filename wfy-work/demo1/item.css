@@ -1,0 +1,93 @@
+.product{
+	height:450px;
+}
+.item-title >h3 button{
+	font-size:18px;
+	padding: 15px 10px;
+	border:none;
+	background-color: white;
+	outline:none;
+}
+.item-title h3 button:nth-child(1){
+	background-color: #53BAFF;
+}
+.item-title >h3{
+	height:80px;
+	padding: 20px;
+	text-align: center;
+}
+.item-title>h3 button:hover{
+	background-color: #53BAFF;
+	
+}
+.items .item {
+	width: 276px;
+	float: left;
+	margin-right: 32px;
+	
+}
+.items .item:nth-child(4){
+	margin-right: 0;
+}
+.items .item a{
+	display: block;
+	width: 276px;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+	border-radius: 3px;
+	position: relative;
+}
+.items .item > a img{
+	display: block;
+	width: 100%;
+}
+.items .item > a .eye{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	position: absolute;
+	background-color: #73B320;
+	top:50%;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: -25px;
+	opacity: 0;
+	transform: scale(1.2);
+	transition:0.5s;
+	
+}
+.items .item > a:hover .eye{
+	opacity: 1;
+	transform: scale(1);
+}
+.items .item > p{
+	color:#666;
+}
+
+.items .item > h5{
+	color:red;
+	opacity: 1;
+	transform: translateY(10px);
+
+}
+.items .item  .choose{
+	opacity: 0;
+	transition: 0.5s;
+}
+.items .item  .choose a{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: #39B0FF;
+	border-radius:50%;
+	margin-right: 8px;
+	
+}
+.items .item:hover .choose{
+	opacity: 1;
+	transform: translateY(-20px);
+}
+.items .item:hover h5{
+	opacity: 0;
+	transform: translateY(10px);
+}
