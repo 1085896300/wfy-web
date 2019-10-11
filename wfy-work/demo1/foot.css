@@ -142,7 +142,6 @@
 	height: 92px;
 }
 .trademark{
-	width: 1200px;
 	height: 92px;
 	margin: 0 auto;
 	display: inline-block;
@@ -155,9 +154,11 @@
 .trademark span:nth-child(2){
 	color: #39b0ff;
 }
-.last > .last-img{
+.last > .center> .last-img{
 	display: inline-block;
+	float:right;
 }
-.last > .last-img img{
-	float:left;
+.last > .center>.last-img img{
+	float:right;
+	margin-top:34px;
 }
