@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+			<input id="inp" type="text" placeholder="输入您的姓名"/>
+		    <button id="btn">签到</button>
+		    <button id="btn1">签到人数</button>
+		    <h4 id="h4"></h4>
+		<script>
+			var str='大哥,代学长,二狗,小茜,华洁,阿直,飞宇,岁'
+		    var arr=[];
+		    var inp=document.getElementById('inp');
+		    var btn=document.getElementById('btn');
+		    var btn1=document.getElementById('btn1');
+		    var h=document.getElementById('h4');
+		    
+		    var strArr=str.split(",");
+		    
+		    btn.onclick=function(){
+		    	for(var j=0;j<arr.length;j++){
+		    		if(inp.value==arr[j]){
+		    			alert("此人已经签到过！");
+		    			return false;
+		    		}
+		    	}
+		    	
+		    	
+		    	for (var i=0;i<strArr.length;i++) {
+		    		if(inp.value==strArr[i]){
+		    			arr.push(inp.value);
+						inp.value = "";
+						strArr.splice(i,1);
+		    		}
+		    	}
+		    	
+		    }
+		    btn1.onclick=function(){
+		       /*var reg = new RegExp(arr.join(','),"g");
+		       console.log(reg);
+		       var a = str.replace(reg,"");*/
+		      
+		      document.body.innerHTML ='签到人数:'+arr.length + arr.join(',')+'<br>' +'未签到人数:'+ (strArr.length) + strArr.join(',');
+			   //document.body.innerHTML ='签到人数:'+arr.length+'<br>' +'未签到人数:'+ (8-arr.length) +a;
+		    }
+		
+		//arr.join(','):返回一个字符串。该字符串是通过把 arrayObject 的每个元素转换为字符串，然后把这些字符串连接起来，在两个元素之间插入 separator 字符串而生成的
+		</script>
+	</body>
+</html>
