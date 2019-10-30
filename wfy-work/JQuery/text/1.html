@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+        .bg{
+            width: 100%;
+            height: 977px;
+        }
+        .bg-ul{
+            width: 50px;
+            height: 90px;
+            display: inline-block;
+            border-radius: 50%;
+        }
+        .bg-ul >li{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            list-style: none;
+            background-color: aquamarine;
+        }
+        .sm{
+            width: 500px;
+            height: 200px;
+            margin-left: 20px;
+        }
+        .sm li{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; 
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+            list-style: none;
+            display: none;
+        }
+        .sm li:nth-child(1){
+            background-color: red;
+        }
+        .sm li:nth-child(2){
+            background-color: olive;
+        }
+        .sm li:nth-child(3){
+            background-color: palevioletred;
+        }
+        .sm li:nth-child(4){
+            background-color: brown;
+        }
+        .sm li:nth-child(5){
+            background-color: peru;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+         <ul class="bg-ul">
+                   <li>
+                   <ul class="sm">
+                       <li></li>
+                       <li></li>
+                       <li></li>
+                       <li></li>
+                       <li></li>
+                   </ul>
+               </li>
+         </ul>
+    </div>
+    <script> 
+            $(".sm li").click(function(){
+                $(".bg").css("background-color",$(this).css("background-color"));
+            })
+            
+            var a = true;
+			$(".bg-ul li").click(function(){
+            	if (a) {
+		           $(".bg-ul>li>.sm li").css({"display":"block"})
+		           a = false;
+	            } else {
+		           $(".bg-ul>li>.sm li").css({"display":"none"})
+		           a = true;
+	            }
+            })
+    </script>
+</body>
+<html>
