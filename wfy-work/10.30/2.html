@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        #n1,#n2{
+            width:30px;
+            height: 10px;
+        }
+        #p1,#p2{
+            width:60px;
+            height: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="inp1">华为mate20
+    <input type="number" value="1" id="n1">
+             单价：￥3500
+    合计:<input type="text" value="3500" id="p1"><br>
+    <input type="checkbox" id="inp2">小米8
+    <input type="number" value="1" id="n2">
+              单价：￥2500
+    合计:<input type="text" value="3500" id="p2"><br>
+   <button id="btn">结算</button>
+   <input type="number" value="0" id="jg" />
+    <script>
+    	$('#n1').change(function(){
+    		p1.value = n1.value * 3500;
+    	})
+    	$('#n2').change(function(){ 
+    		p2.value = n2.value * 3500;
+    	})
+    	$("#inp1,#inp2,#btn").attr("min","0");
+        
+        	 $("#inp1,#inp2").change(function () {
+            var a=$("#inp1").is(":checked"); 
+            console.log(a)
+            var b=$("#inp2").is(":checked"); 
+            console.log(b)
+            
+            if(a==true&&b==true){
+        	    p1.value=(n1.value)*3500;
+        	    p2.value=(n2.value)*2500;
+        	    $("#btn").click(function(){
+//          	   alert(Number(p1.value)+Number(p2.value))
+                   jg.value=Number(p1.value)+Number(p2.value)
+                })
+             }else if(a==false&&b==true){
+             	p1.value=0;
+             	p2.value=(n2.value)*2500;
+             	$("#btn").click(function(){
+//          	   alert(Number(p2.value))
+                   jg.value=Number(p2.value);
+                })
+             }else if(a==true&&b==false){
+             	p1.value=(n1.value)*3500;
+             	p2.value=0;
+             	$("#btn").click(function(){
+//          	   alert(Number(p1.value))
+                     jg.value=Number(p1.value);
+                })
+             }else{ 
+             	p1.value=0;
+             	p2.value=0;
+             	$("#btn").click(function(){
+//          	   alert(Number(p1.value))
+                     jg.value=0;
+                })
+             }
+           
+        })
+        
+    </script>
+</body>
+</html>
